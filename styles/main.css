@@ -1,0 +1,90 @@
+:root {
+  --max-width: 60rem;
+  --color-secondary: rgba(255, 196, 0);
+}
+
+body {
+  background-color: rgb(41, 41, 100);
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: right;
+  position: fixed;
+  width: 12rem;
+  left: 12%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logo {
+  display: block;
+  color: #fff;
+  font-family: Space Grotesk;
+  text-decoration: none;
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  transition: all ease 125ms;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+.logo:hover,
+.logo.is-active {
+  color: var(--color-secondary);
+}
+
+.logo::after,
+.nav a::after {
+  content: '';
+  position: absolute;
+  top: 30%;
+  right: 0;
+  bottom: 30%;
+  width: 2px;
+  background-color: var(--color-secondary);
+  transition: top ease 125ms, bottom ease 125ms;
+  opacity: 0;
+}
+
+.logo:hover::after,
+.logo.is-active::after,
+.nav a:hover::after,
+.nav a.is-active::after {
+  top: 0;
+  bottom: 0;
+  opacity: 1;
+}
+
+.nav a {
+  position: relative;
+  display: block;
+  padding: 0.35em 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: all ease 125ms;
+}
+
+.nav a:hover,
+.nav a.is-active {
+  color: var(--color-secondary);
+}
+
+.main {
+  line-height: 1.5;
+  margin: 1.5rem 0;
+  margin-left: calc(12% + 12rem);
+  margin-right: 12%;
+  padding-left: 1.5rem;
+}
