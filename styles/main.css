@@ -101,8 +101,13 @@ body {
   margin-left: calc(12% + 12rem);
   margin-right: 12%;
   padding-left: 1.5rem;
+}
+
+.main-inner {
   display: flex;
   flex-direction: column;
+  max-width: 50rem;
+  margin: 0 auto;
 }
 
 @keyframes appear {
@@ -121,7 +126,7 @@ body {
   text-align: center;
   display: flex;
   align-self: flex-start;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   animation: appear ease 1s 1 forwards;
   opacity: 0;
   transform: translateY(2rem);
