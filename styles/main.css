@@ -106,7 +106,7 @@ body {
 .main-inner {
   display: flex;
   flex-direction: column;
-  max-width: 50rem;
+  /* max-width: 50rem; */
   margin: 0 auto;
 }
 
@@ -127,17 +127,24 @@ body {
   display: flex;
   align-self: flex-start;
   backdrop-filter: blur(20px);
-  animation: appear ease 1s 1 forwards;
+  animation: appear ease 500ms 1 forwards;
   opacity: 0;
   transform: translateY(2rem);
+  overflow: hidden;
 }
 
 .award:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
-.award:nth-child(2n) {
+.award:nth-child(2n-1) {
   align-self: flex-end;
+  margin-right: calc(50% - 3.5rem - 1px);
+}
+
+.award:nth-child(2n) {
+  align-self: flex-start;
+  margin-left: calc(50% - 3.5rem - 1px);
 }
 
 .award:nth-child(1) {
@@ -178,11 +185,12 @@ body {
   display: flex;
   order: 2;
   align-items: center;
+  justify-content: center;
   font-size: 2em;
   font-weight: 600;
   font-family: Space Grotesk;
   margin-left: auto;
-  padding: 1rem;
+  width: 7rem;
   background-color: var(--color-secondary);
   color: #000;
 }
