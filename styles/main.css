@@ -103,10 +103,9 @@ body {
   padding-left: 1.5rem;
 }
 
-.main-inner {
+#awards {
   display: flex;
   flex-direction: column;
-  /* max-width: 50rem; */
   margin: 0 auto;
 }
 
