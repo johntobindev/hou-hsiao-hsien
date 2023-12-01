@@ -41,6 +41,15 @@
   margin-left: calc(50% - 3.5rem - 1px);
 }
 
+@media screen and (max-width: 70rem) {
+  .award {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    align-self: center !important;
+    width: 100%;
+  }
+}
+
 .award:nth-child(1) {
   animation-delay: 500ms;
 }
@@ -60,7 +69,7 @@
 .award-section {
   flex: 1;
   order: 1;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
 }
 
 .award-title {
@@ -68,7 +77,7 @@
   font-weight: 600;
   color: var(--color-secondary);
   font-family: Space Grotesk;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 .award-awarder {

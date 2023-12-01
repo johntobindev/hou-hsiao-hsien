@@ -28,6 +28,12 @@ body {
   transform: translateY(-50%);
 }
 
+@media screen and (max-width: 70rem) {
+  .header {
+    left: 6%;
+  }
+}
+
 .logo {
   display: block;
   color: #fff;
@@ -105,4 +111,12 @@ body {
   margin-left: calc(12% + 12rem);
   margin-right: 12%;
   padding-left: 1.5rem;
+}
+
+@media screen and (max-width: 70rem) {
+  .main {
+    width: calc(100% - 12% - 12rem);
+    margin-left: calc(6% + 12rem);
+    margin-right: 6%;
+  }
 }
