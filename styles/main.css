@@ -1,6 +1,7 @@
 :root {
   --max-width: 60rem;
   --color-secondary: rgba(255, 196, 0);
+  --header-width: 12em;
 }
 
 body {
@@ -22,7 +23,7 @@ body {
 .header {
   text-align: right;
   position: fixed;
-  width: 12rem;
+  width: var(--header-width);
   left: 12%;
   top: 50%;
   transform: translateY(-50%);
@@ -41,7 +42,7 @@ body {
   text-decoration: none;
   font-size: 3em;
   margin-bottom: 0.5em;
-  transition: all ease 125ms;
+  transition: color ease 125ms;
   padding: 0 1.5rem;
   position: relative;
 }
@@ -94,7 +95,7 @@ body {
   color: #fff;
   text-decoration: none;
   font-size: 1.2em;
-  transition: all ease 125ms;
+  transition: color ease 125ms;
 }
 
 .nav a:hover,
@@ -105,18 +106,18 @@ body {
 /* Main */
 
 .main {
-  width: calc(100% - 24% - 12rem);
+  width: calc(100% - 24% - var(--header-width));
   line-height: 1.5;
   margin: 1.5rem 0;
-  margin-left: calc(12% + 12rem);
+  margin-left: calc(12% + var(--header-width));
   margin-right: 12%;
   padding-left: 1.5rem;
 }
 
 @media screen and (max-width: 70rem) {
   .main {
-    width: calc(100% - 12% - 12rem);
-    margin-left: calc(6% + 12rem);
+    width: calc(100% - 12% - var(--header-width));
+    margin-left: calc(6% + var(--header-width));
     margin-right: 6%;
   }
 }
