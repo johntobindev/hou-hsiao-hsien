@@ -50,6 +50,18 @@
   }
 }
 
+@media screen and (max-width: 70rem) {
+  .award {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 45rem) {
+  .award:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+}
+
 .award:nth-child(1) {
   animation-delay: 500ms;
 }
@@ -70,6 +82,9 @@
   flex: 1;
   order: 1;
   padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .award-title {
@@ -96,6 +111,14 @@
   width: 7rem;
   background-color: var(--color-secondary);
   color: #000;
+}
+
+@media screen and (max-width: 70rem) {
+  .award-year {
+    writing-mode: sideways-lr;
+    width: auto;
+    padding: 0.5em 0;
+  }
 }
 
 .award:nth-child(2n) .award-year {
