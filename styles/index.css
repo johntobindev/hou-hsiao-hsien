@@ -1,3 +1,37 @@
+.quote {
+  display: flex;
+  max-width: 38rem;
+  font-size: 1.2em;
+  backdrop-filter: blur(10px);
+  padding: 1em 1em;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  margin: 0 auto 1.5rem;
+  align-items: center;
+  transform: translateY(2rem) scale(0.8);
+  animation: appear ease 500ms 1 forwards;
+  animation-delay: 500ms;
+  opacity: 0;
+}
+
+@media screen and (max-width: 45rem) {
+  .quote {
+    max-width: none;
+    margin-bottom: 0.5rem;
+    animation-delay: 0ms;
+  }
+}
+
+.quote i {
+  font-size: 2em;
+  color: rgba(255, 255, 255, 0.25);
+  color: var(--color-secondary);
+}
+
+.quote p {
+  margin: 0 0 0 1em;
+}
+
 #awards {
   display: flex;
   flex-direction: column;
@@ -5,12 +39,9 @@
 }
 
 @keyframes appear {
-  0% {
-  }
-
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -22,7 +53,7 @@
   backdrop-filter: blur(10px);
   animation: appear ease 500ms 1 forwards;
   opacity: 0;
-  transform: translateY(2rem);
+  transform: translateY(2rem) scale(0.8);
   overflow: hidden;
 }
 
@@ -56,26 +87,42 @@
   }
 }
 
+.award:nth-child(1) {
+  animation-delay: 1000ms;
+}
+.award:nth-child(2) {
+  animation-delay: 1500ms;
+}
+.award:nth-child(3) {
+  animation-delay: 2000ms;
+}
+.award:nth-child(4) {
+  animation-delay: 2500ms;
+}
+.award:nth-child(5) {
+  animation-delay: 3000ms;
+}
+
 @media screen and (max-width: 45rem) {
   .award:not(:last-child) {
     margin-bottom: 0.5rem;
   }
-}
 
-.award:nth-child(1) {
-  animation-delay: 500ms;
-}
-.award:nth-child(2) {
-  animation-delay: 1000ms;
-}
-.award:nth-child(3) {
-  animation-delay: 1500ms;
-}
-.award:nth-child(4) {
-  animation-delay: 2000ms;
-}
-.award:nth-child(5) {
-  animation-delay: 2500ms;
+  .award:nth-child(1) {
+    animation-delay: 500ms;
+  }
+  .award:nth-child(2) {
+    animation-delay: 1000ms;
+  }
+  .award:nth-child(3) {
+    animation-delay: 1500ms;
+  }
+  .award:nth-child(4) {
+    animation-delay: 2000ms;
+  }
+  .award:nth-child(5) {
+    animation-delay: 2500ms;
+  }
 }
 
 .award-section {
@@ -88,15 +135,15 @@
 }
 
 .award-title {
-  font-size: 1.4em;
-  font-weight: 600;
-  color: var(--color-secondary);
+  font-size: 1.3em;
   font-family: Space Grotesk;
   line-height: 1.1;
 }
 
 .award-awarder {
+  font-size: 0.9em;
   font-weight: 600;
+  color: var(--color-secondary);
 }
 
 .award-year {
