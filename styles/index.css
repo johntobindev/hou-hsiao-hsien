@@ -19,7 +19,7 @@
   border-radius: 10px;
   display: flex;
   align-self: flex-start;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
   animation: appear ease 500ms 1 forwards;
   opacity: 0;
   transform: translateY(2rem);
