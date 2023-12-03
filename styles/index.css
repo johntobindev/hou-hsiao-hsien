@@ -17,7 +17,6 @@
 .award {
   border: 2px solid var(--color-secondary);
   border-radius: 10px;
-  text-align: center;
   display: flex;
   align-self: flex-start;
   backdrop-filter: blur(20px);
@@ -34,6 +33,7 @@
 .award:nth-child(2n-1) {
   align-self: flex-end;
   margin-right: calc(50% - 3.5rem - 1px);
+  text-align: right;
 }
 
 .award:nth-child(2n) {
@@ -45,8 +45,8 @@
   .award {
     margin-left: 0 !important;
     margin-right: 0 !important;
-    align-self: center !important;
-    width: 100%;
+    align-self: flex-start !important;
+    text-align: left !important;
   }
 }
 
@@ -102,4 +102,10 @@
   order: 0;
   margin-left: 0;
   margin-right: auto;
+}
+
+@media screen and (max-width: 70rem) {
+  .award .award-year {
+    order: 0;
+  }
 }
