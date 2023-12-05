@@ -100,6 +100,9 @@ body {
 @media screen and (min-width: 45rem) {
   .logo span {
     display: inline-block;
+  }
+
+  .logo.is-index span {
     animation: slide ease 1.25s 1;
   }
 
