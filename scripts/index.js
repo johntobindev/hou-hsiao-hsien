@@ -28,7 +28,5 @@ for (let i = 0; i < awards.length; i++) {
   `
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const awardsElem = document.getElementById('awards')
-  awardsElem.innerHTML = html
-})
+const awardsElem = document.getElementById('awards')
+awardsElem.innerHTML = html
