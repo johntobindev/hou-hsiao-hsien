@@ -5,10 +5,49 @@
 }
 
 body {
-  background-image: url('../images/background.jpg');
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(1.05);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  z-index: -1;
+  animation: fadeIn ease-out 5000ms 1 forwards;
+}
+
+.backdrop.is-index {
+  background-image: url('../images/background.jpg');
+}
+
+.backdrop.is-about {
+  background-image: url('../images/background-7.jpg');
+}
+
+.backdrop.is-films {
+  background-image: url('../images/background-8.jpg');
+}
+
+.backdrop.is-shop {
+  background-image: url('../images/background-5.jpg');
+}
+
+.backdrop.is-contact {
+  background-image: url('../images/background-4.jpg');
 }
 
 .wrapper {
