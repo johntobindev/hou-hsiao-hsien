@@ -10,10 +10,22 @@
 @media screen and (max-width: 85rem) {
   #films {
     grid-template-columns: auto;
+    gap: 0.5em;
   }
 
   .film {
     max-width: 35rem;
+  }
+}
+
+@keyframes filmAppear {
+  50% {
+    opacity: 1;
+    transform: scale(1.05) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -24,7 +36,22 @@
   /* background-color: #000; */
   backdrop-filter: blur(20px);
   transition: all ease 125ms;
+  opacity: 0;
+  transform: scale(0.95) translateY(1em);
+  animation: filmAppear ease-out 250ms 1 forwards;
 }
+
+.film:nth-child(01) { animation-delay: 0; }
+.film:nth-child(02) { animation-delay: 150ms; }
+.film:nth-child(03) { animation-delay: 300ms; }
+.film:nth-child(04) { animation-delay: 450ms; }
+.film:nth-child(05) { animation-delay: 600ms; }
+.film:nth-child(06) { animation-delay: 750ms; }
+.film:nth-child(07) { animation-delay: 900ms; }
+.film:nth-child(08) { animation-delay: 1050ms; }
+.film:nth-child(09) { animation-delay: 1200ms; }
+.film:nth-child(10) { animation-delay: 1350ms; }
+.film:nth-child(11) { animation-delay: 1500ms; }
 
 .film:hover {
   border-color: var(--color-secondary);

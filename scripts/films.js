@@ -9,6 +9,7 @@ class Film {
 }
 
 const films = [
+  new Film("The Assassin", "assassin", 2015, "Set in seventh-century China during the last years of the Tang Dynasty following the Lushan Rebellion, and loosely based on the martial arts story \"Nie Yinniang\" by Pei Xing. A female assassin begins to question her loyalties when she falls in love with one of her targets.", "1h 45m"),
   new Film("Café Lumière", "cafe-lumiere", 2003, "Making her way through life by forming superficial relationships, Yoko keeps everyone at arm's length, whether it's her father and stepmother or Hajime, the owner of a small bookstore who could be the father of her unborn child. Yoko seems most at home when she's riding the train, speeding around the city with only her thoughts to entertain her.", "1h 43m"),
   new Film("Millennium Mambo", "millennium-mambo", 2001, "Working as a hostess in a trendy bar, a young beauty finds herself mercilessly torn between two men. Set against the intoxicating and decadent background of modern day Hong Kong, Millennium Mambo chronicles the fleeting, finite blooming of a young woman.", "1h 46m"),
   new Film("A City of Sadness", "city-of-sadness", 1989, "The story of a family embroiled in the \"White Terror\", mainland China's political repression that was wrought on the Taiwanese people by the Kuomintang government in the late 1940s.", "2h 39m"),
