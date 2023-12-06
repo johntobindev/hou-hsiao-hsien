@@ -16,15 +16,22 @@
   border-radius: 4px;
   max-width: 35rem;
   width: 100%;
-  background-color: #111;
+  /* background-color: #000; */
+  backdrop-filter: blur(20px);
+}
+
+.film:hover {
+  border-color: var(--color-secondary);
 }
 
 .film-backdrop {
-  height: 11rem;
+  height: 13rem;
   background-size: cover;
   background-position: center;
   position: relative;
   z-index: 0;
+  -webkit-mask-image: linear-gradient(to bottom, black, black, transparent);
+  mask-image: linear-gradient(to bottom, black, black, transparent);
 }
 
 .film-backdrop::after {
@@ -34,12 +41,13 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to top, #111, transparent, transparent);
+  /* background-image: linear-gradient(to top, #000, transparent, transparent); */
+  display: none;
 }
 
 .film-header {
   display: flex;
-  margin-top: -9rem;
+  margin-top: -11rem;
   position: relative;
   align-items: flex-end;
   padding: 0 1rem;
@@ -56,9 +64,11 @@
 }
 
 .film-details {
-  color: rgba(255, 255, 255, 0.5);
   margin-top: 0.25em;
   font-size: 0.9em;
+  font-weight: bold;
+  /* color: rgba(255, 255, 255, 0.5); */
+  color: var(--color-secondary);
 }
 
 .film-poster {
@@ -68,6 +78,7 @@
   margin-left: auto;
   background-size: cover;
   box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
 }
 
 .film-description {
