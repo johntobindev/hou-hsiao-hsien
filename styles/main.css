@@ -2,6 +2,7 @@
   --max-width: 60rem;
   --color-secondary: rgba(255, 196, 0);
   --header-width: 12em;
+  --max-width-inner: 38rem;
 }
 
 body {

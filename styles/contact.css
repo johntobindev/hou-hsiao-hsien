@@ -1,6 +1,3 @@
-.main {
-}
-
 @keyframes appear {
   from {
     opacity: 0;
@@ -16,7 +13,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  max-width: 35rem;
+  max-width: var(--max-width-inner);
   animation: appear 250ms ease-out 1;
 }
 

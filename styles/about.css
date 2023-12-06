@@ -1,0 +1,62 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--max-width-inner);
+  margin: 0 auto;
+}
+
+@keyframes appear1 {
+  from {
+    transform: scale(0.95) rotate(15deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.about-pic {
+  width: 12rem;
+  height: 12rem;
+  background-image: url('../images/about-1.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 2px solid var(--color-secondary);
+  animation: appear1 0.25s ease-out 1 forwards;
+}
+
+.about p {
+  line-height: 1.7;
+}
+
+@keyframes appear2 {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.about figure {
+  margin: 0;
+  animation: appear2 250ms ease-out 1 forwards;
+}
+
+.about figure img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+}
+
+.about figcaption {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9em;
+  margin-top: 0.5em;
+}
