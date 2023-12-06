@@ -80,7 +80,7 @@
 .film-poster {
   width: 7em;
   height: 10.5em;
-  background-color: red;
+  background-color: #000;
   margin-left: auto;
   background-size: cover;
   box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.5);
