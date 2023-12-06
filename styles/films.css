@@ -3,21 +3,27 @@
   grid-template-columns: auto auto;
   gap: 1em;
   justify-items: center;
+  max-width: 74rem;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 85rem) {
   #films {
     grid-template-columns: auto;
   }
+
+  .film {
+    max-width: 35rem;
+  }
 }
 
 .film {
   border: 2px solid rgba(255, 255, 255, 0.25);
   border-radius: 4px;
-  max-width: 35rem;
   width: 100%;
   /* background-color: #000; */
   backdrop-filter: blur(20px);
+  transition: all ease 125ms;
 }
 
 .film:hover {
