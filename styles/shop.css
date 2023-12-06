@@ -1,0 +1,4 @@
+.shop {
+  max-width: var(--max-width-inner);
+  margin: 0 auto;
+}
