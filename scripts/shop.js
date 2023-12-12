@@ -56,6 +56,8 @@ const deleteItem = event => {
 }
 
 const updateBasket = () => {
+  localStorage.setItem('basket', JSON.stringify(basket));
+
   if (basket[0] === 0 && basket[1] === 0 && basket[2] === 0) {
     document.getElementById('basket-empty').classList.add('is-empty')
     document.getElementById('basket-wrapper').classList.add('is-empty')
@@ -96,4 +98,10 @@ const updateBasket = () => {
   priceElem.innerText = `€${totalPrice.toFixed(2)}`;
 }
 
-updateBasket();
+const initialise = () => {
+  const localStorageBasket = JSON.parse(localStorage.getItem('basket'));
+  if (localStorageBasket != null) basket = localStorageBasket;
+  updateBasket();
+}
+
+initialise();
