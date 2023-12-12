@@ -48,6 +48,7 @@
 
 .basket-item-inner {
   display: flex;
+  align-items: center;
 }
 
 .basket-item-quantity {
@@ -65,10 +66,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .basket-item-quantity span {
   margin: 0 0.35em;
+}
+
+.basket-delete {
+  margin-left: 0.5em;
+  font-size: 0.9em;
+  color: red;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.basket-delete:hover {
+  text-decoration: underline;
 }
 
 .basket-item-price {

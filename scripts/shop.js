@@ -49,6 +49,12 @@ const removeItem = event => {
   updateBasket();
 }
 
+const deleteItem = event => {
+  const key = event.currentTarget.getAttribute('data-product-key')
+  if (basket[key] > 0) basket[key] = 0;
+  updateBasket();
+}
+
 const updateBasket = () => {
   if (basket[0] === 0 && basket[1] === 0 && basket[2] === 0) {
     document.getElementById('basket-empty').classList.add('is-empty')
@@ -78,6 +84,7 @@ const updateBasket = () => {
             <span>${quantity}</span>
             <button data-product-key="${i}" onclick="addItem(event)">+</button>
           </div>
+          <button class="basket-delete" data-product-key="${i}" onclick="deleteItem(event)">Delete</button>
           <div class="basket-item-price">&euro;${totalProductPrice.toFixed(2)}</div>
         </div>
       </li>
