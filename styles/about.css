@@ -56,7 +56,11 @@
 .about figure {
   margin: 0;
   animation: appear2 250ms ease-out 1 forwards;
+  opacity: 0;
 }
+
+.about figure:nth-of-type(1) { animation-delay: 150ms; }
+.about figure:nth-of-type(2) { animation-delay: 300ms; }
 
 .about figure img {
   width: 100%;
