@@ -43,22 +43,27 @@
     </header>
 
     <div class="main">
-      <form class="form">
+      <form class="form" onsubmit="handleSubmit(event)" novalidate>
         <label for="form-name">Your name</label>
-        <input id="form-name" type="text" placeholder="Name Example">
+        <input id="form-name" type="text" placeholder="Name Example" required>
+        <p class="form-error" id="form-name-error"></p>
 
         <label for="form-email">Your email</label>
-        <input id="form-email" type="email" placeholder="name@example.com">
+        <input id="form-email" type="email" placeholder="name@example.com" required>
+        <p class="form-error" id="form-email-error"></p>
 
         <label for="form-name">Your message</label>
-        <textarea id="form-message" placeholder="Type your message here"></textarea>
+        <textarea id="form-message" placeholder="Type your message here" required></textarea>
+        <p class="form-error" id="form-message-error"></p>
 
         <button type="submit">Send!</button>
+        <p id="form-success">Message sent! 😊</p>
       </form>
     </main>
   </div>
 
   <!-- Scripts -->
   <script src="./scripts/main.js"></script>
+  <script src="./scripts/contact.js"></script>
 </body>
 </html>
